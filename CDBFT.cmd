@@ -21,7 +21,6 @@ echo;&pause
 exit
 :play
 ::备份保存路径👇【PAT=？】
-echo;%~dp0
 set PAT=%~dp0
 echo;%pat%\ >errlog.log
 dir "%pat%\" 2>>errlog.log
