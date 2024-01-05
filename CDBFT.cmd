@@ -2,7 +2,7 @@
 @echo off
 set errorlevel=
 if "%~1"=="bcp" goto play
-%1 start "" mshta vbscript:createobject("shell.application").shellexecute("""%~0""","::",,"runas",1)(window.close)&exit
+%1 start "" mshta vbscript:createobject("shell.application").shellexecute("""%~0""","::",,"runas",1)(window.close)&&if errorlevel 0 exit
 echo;
 echo;Install Tasks
 echo;&pause
