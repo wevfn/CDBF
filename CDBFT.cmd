@@ -25,7 +25,7 @@ echo;%~dp0
 set PAT=%~dp0
 echo;%pat%\ >errlog.log
 dir "%pat%\" 2>>errlog.log
-if errorlevel 1 %~dp0start.vbs err&exit
+if errorlevel 1 "%~dp0start.vbs" err&exit
 call :lck %* 3>>%0
 :lck
 cd /d "%~dp0" 2>>errlog.log
